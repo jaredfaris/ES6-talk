@@ -57,10 +57,68 @@
 				</section>
 
                 <section>
-                    <h2>Hoisting Example</h2>
-                    <script src="samples/variable-scoping-1.js"></script>
-                    <button id="variableScopringDemo1button" onclick="variableScopingDemo1()">Go!</button>
+                    <section>
+                        <h2>Hoisting Example</h2>
+                        <script src="samples/variable-scoping-1.js"></script>
+                        <button id="variableScopringDemo1button" onclick="variableScopingDemo1()">Go!</button>
+
+                        <aside class="notes">
+                            Hoisting happens because JS does two passes during interpretation.
+                            One processes variables and functions.
+                            The second actually executes the code.
+                            The first step organizes the code to make the second faster, and hoisting is part of this.
+                        </aside>
+                    </section>
+                    <section>
+                        <h2>Where Variables Get Hoisted</h2>
+                        <img src="images/variable-scoping/hoisted1.jpg">
+                        &nbsp;
+                        <img src="images/variable-scoping/hoisted2.jpg">
+                    </section>
                 </section>
+
+                <section>
+                    <section>
+                        <h2>ES5 Scope</h2>
+                        <ul>
+                            <li>Global</li>
+                            <li>Function</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Function Scope Demo</h2>
+                        <script src="samples/function-scoping-1.js"></script>
+                        <script src="samples/function-scoping-2.js"></script>
+                        <button id="functionScopeDemo1button" onclick="functionScopingDemo1()">Global!</button>
+                        &nbsp;
+                        <button id="functionScopeDemo2button" onclick="functionScopingDemo2()">Function!</button>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h2>Let</h2>
+                        <p>The "let" keyword creates a local block scope.</p>
+                        <pre><code>
+    if (myVar > 5) {
+        let myVarSquared = myVar * myVar;
+        console.log(myVarSquared);
+    }
+                        </code></pre>
+                        <p>Usable inside of if/else and loops.</p>
+                    </section>
+                    <section>
+                        <h2>Let Demo</h2>
+                        <script src="samples/let-scoping-1.js"></script>
+                        <button id="letScopeDemo1button" onclick="letScopingDemo1()">Go!</button>
+                    </section>
+                    <section>
+                        <h2>Let <strike>Hoisting</strike></h2>
+                        <script src="samples/let-hoisting-1.js"></script>
+                        <button id="letHoistingDemo1button" onclick="letHoistingDemo1()">Go!</button>
+                    </section>
+                </section>
+                <section></section>
 
 			</div>
 
@@ -91,8 +149,6 @@
 					{ src: 'plugin/notes/notes.js', async: true }
 				]
 			});
-
-		</script>
-
-	</body>
+        </script>
+    </body>
 </html>

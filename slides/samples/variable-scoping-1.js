@@ -1,7 +1,7 @@
 function variableScopingDemo1() {
     // myText gets hoisted here
 
-    debugger
+    debugger;
 
     setTimeout(function(){
         alert(myText);
@@ -9,3 +9,4 @@ function variableScopingDemo1() {
 
     var myText = "I'm a string!";
 }
+
