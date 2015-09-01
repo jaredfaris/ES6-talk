@@ -3,7 +3,6 @@ function letHoistingDemo1() {
     debugger;
     // What will get logged?
 
-
     console.log(myVar);
     console.log(myLet);
 
