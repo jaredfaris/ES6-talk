@@ -1,4 +1,4 @@
-function variableScopringDemo1() {
+function variableScopingDemo1() {
     // myText gets hoisted here
 
     debugger

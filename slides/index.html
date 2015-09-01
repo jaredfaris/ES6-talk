@@ -15,6 +15,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
 		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/custom.css">
 		<link rel="stylesheet" href="css/theme/black.css" id="theme">
 
 		<!-- Code syntax highlighting -->
@@ -28,12 +29,6 @@
 			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
-
-        <style>
-            button {
-                font-size: 1.5em;
-            }
-        </style>
 
 		<!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
@@ -62,11 +57,9 @@
 				</section>
 
                 <section>
+                    <h2>Hoisting Example</h2>
                     <script src="samples/variable-scoping-1.js"></script>
-                    <button id="variableScopringDemo1button">Hoisting Example</button>
-                    <script>
-                        document.getElementById("variableScopringDemo1button").onclick = variableScopringDemo1;
-                    </script>
+                    <button id="variableScopringDemo1button" onclick="variableScopingDemo1()">Go!</button>
                 </section>
 
 			</div>
