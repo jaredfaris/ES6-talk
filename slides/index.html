@@ -96,6 +96,10 @@
                 </section>
 
                 <section>
+                    <h1>Let & Const</h1>
+                </section>
+
+                <section>
                     <section>
                         <h2>Let</h2>
                         <p>The "let" keyword creates a local block scope.</p>
@@ -178,7 +182,142 @@
                         <button id="constantScopeDemo2button" onclick="constantScopeDemo2()">Go!</button>
                     </section>
                 </section>
-			</div>
+
+                <section>
+                    <h1>Classes</h1>
+                </section>
+
+                <section>
+
+                    <section>
+                        <h2>Class Declaration</h2>
+                        <pre><code>
+    class Profile {
+        constructor(emailAddress) {
+            this.emailAddress = emailAddress;
+        }
+    }
+                        </code></pre>
+                    </section>
+
+                    <section>
+                        <h2>Class Expression</h2>
+                        <pre><code>
+    var Profile = class {
+        constructor(emailAddress) {
+            this.emailAddress = emailAddress;
+        }
+    }
+
+    var Profile = class Profile {
+        constructor(emailAddress) {
+            this.emailAddress = emailAddress;
+        }
+    }
+                        </code></pre>
+                    </section>
+
+                    <section>
+                        <h2>Using a Class</h2>
+                        <script src="samples/using-classes-1.js"></script>
+                        <button id="usingClasses1Button" onclick="usingClasses1()">Go!</button>
+                    </section>
+
+                    <section>
+                        <h2>Classes are Functions</h2>
+                        <script src="samples/using-classes-2.js"></script>
+                        <button id="usingClasses2Button" onclick="usingClasses2()">Go!</button>
+                    </section>
+
+                    <section>
+                        <h2>Setters and Getters</h2>
+                        <script src="samples/using-classes-3.js"></script>
+                        <button id="usingClasses3Button" onclick="usingClasses3()">Go!</button>
+                    </section>
+
+                    <section>
+                        <h2>Inheritance & Subclassing</h2>
+                        <script src="samples/using-classes-4-inheritance.js"></script>
+                        <button id="usingClasses4Button" onclick="usingClasses4()">Go!</button>
+                    </section>
+
+                    <section>
+                        <h2>Super</h2>
+                        <p>Calls the corresponding function or constructor on the parent class.</p>
+                        <script src="samples/using-classes-5-super.js"></script>
+                        <button id="usingClasses5Button" onclick="usingClasses5()">Go!</button>
+                    </section>
+
+                    <section>
+                        <h2>Instance Methods</h2>
+                    </section>
+
+                    <section>
+                        <h2>Static Methods</h2>
+                    </section>
+
+                    <section>
+                        <h2>Generator Methods</h2>
+                    </section>
+
+                    <section>
+                        <h2>Hoisting Differences</h2>
+                        <p>Class declarations are not hoisted!</p>
+                    </section>
+
+                    <section>
+                        <h2>Prototypical Inheritance</h2>
+                        <p>Classes are syntactical sugar over PI. You can still use the object's prototype</p>
+                        TODO Demo https://reinteractive.net/posts/235-es6-classes-and-javascript-prototypes
+                    </section>
+
+                    <section>
+                        <h2>Other Oddities</h2>
+                        <ul>
+                            <li class="fragment">Class declarations/expressions are internally "strict mode"</li>
+                            <li class="fragment">Methods are not comma separated like key-value-pairs in an object</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>Limitations</h2>
+                        <ul>
+                            <li class="fragment">Only supported by Chrome as of 9/10/2015 and requires strict mode</li>
+                        </ul>
+                    </section>
+                </section>
+
+                <section>
+                    <h1>Arrow Functions</h1>
+                </section>
+
+                <section>
+                    <h1>Promises</h1>
+                </section>
+
+                <section>
+                    <h1>Default Parameters</h1>
+                </section>
+
+                <section>
+                    <h1>Template Strings</h1>
+                </section>
+
+                <section>
+                    <h1>Modules</h1>
+                </section>
+
+                <section>
+                    <h1>Imports</h1>
+                </section>
+
+                <section>
+                    <h1>Array Comprehensions</h1>
+                </section>
+
+                <section>Support & Transpiling</section>
+
+            </div>
 
 		</div>
 

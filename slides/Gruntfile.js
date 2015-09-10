@@ -96,7 +96,8 @@ module.exports = function(grunt) {
 					port: port,
 					base: base,
 					livereload: true,
-					open: true
+					open: true,
+					hostname: 'localhost'
 				}
 			}
 		},
