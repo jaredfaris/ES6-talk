@@ -52,6 +52,12 @@
 					<h1>History of ECMAScript & JavaScript</h1>
 				</section>
 
+                <section>
+                    <h2>Support</h2>
+                    <img src="images/browser-support/chart.PNG">
+                    <p><a href="https://kangax.github.io/compat-table/es6/">https://kangax.github.io/compat-table/es6/</a></p>
+                </section>
+
 				<section>
 					<h1>Variable Scoping</h1>
 				</section>
@@ -293,6 +299,76 @@
 
                 <section>
                     <h1>Arrow Functions</h1>
+                </section>
+
+                <section>
+                    <section>
+                        <h2>Arrow Function Syntax</h2>
+
+                        <pre>
+                            <code>
+    var oldWay = function (param1, param2) {
+        // do stuff
+    };
+
+    var newWay = (param1, param2) => {
+        // do stuff
+    };
+                            </code>
+                        </pre>
+                    </section>
+
+                    <section>
+                        <h2>How Arrow Functions Work</h2>
+                        <ul>
+                            <li class="fragment">Similar to a lambda expression</li>
+                            <li class="fragment">Can have 0+ parameters</li>
+                            <li class="fragment">Can be saved in a named variable</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>Two Primary Benefits</h2>
+                        <ul>
+                            <li class="fragment">Shorter functions</li>
+                            <li class="fragment">Lexical <i>this</i></li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>Shorter Functions</h2>
+                        <script src="samples/arrow-1-long-functions.js"></script>
+                        <script src="samples/arrow-1-short-functions.js"></script>
+                        <button id="arrowButton1" onclick="na1Demo()">Long!</button>
+                        <button id="arrowButton2" onclick="na1Demo2()">Short!</button>
+                    </section>
+
+                    <section>
+                        <h2>Improved?</h2>
+
+                        <img src="images/arrow-functions/simplification1.png">
+
+                        <p class="fragment"><i>Arrow... see what I did there?</i></p>
+                    </section>
+
+                    <section>
+                        <h2>Lexical This</h2>
+                    </section>
+
+                    <section>
+                        <h2>When To Use?</h2>
+                        <ul>
+                            <li class="fragment">When creating methods (reusable function objects), use functions.</li>
+                            <li class="fragment">When creating subroutins/callbacks, use arrows.</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>Limitations</h2>
+                        <ul>
+                            <li class="fragment">Supported by Edge, Firefox and Chrome</li>
+                        </ul>
+                    </section>
                 </section>
 
                 <section>
