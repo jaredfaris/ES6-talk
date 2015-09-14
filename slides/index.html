@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>reveal.js - The HTML Presentation Framework</title>
+		<title>ECMAScript 2015 & JavaScript</title>
 
 		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
 		<meta name="author" content="Hakim El Hattab">
@@ -267,14 +267,19 @@
                     <section>
                         <h2>Prototypical Inheritance</h2>
                         <p>Classes are syntactical sugar over PI. You can still use the object's prototype</p>
-                        TODO Demo https://reinteractive.net/posts/235-es6-classes-and-javascript-prototypes
+                        <script src="samples/using-classes-8-prototyping.js"></script>
+                        <button id="usingClasses8Button" onclick="usingClasses8()">Go!</button>
+
+                        <aside class="notes">
+                            More details at: https://reinteractive.net/posts/235-es6-classes-and-javascript-prototypes
+                        </aside>
                     </section>
 
                     <section>
                         <h2>Other Oddities</h2>
                         <ul>
                             <li class="fragment">Class declarations/expressions are internally "strict mode"</li>
-                            <li class="fragment">Methods are not comma separated like key-value-pairs in an object</li>
+                            <li class="fragment">Semicolons are allowed between methods and not required.</li>
                         </ul>
                     </section>
 
