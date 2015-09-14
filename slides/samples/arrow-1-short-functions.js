@@ -1,6 +1,6 @@
 function na1Demo2() {
     debugger;
-    na1Get('http://localhost:3000/json/', (data) => {
+    na1Get('http://localhost:3000/people/', (data) => {
         debugger;
         console.log("success");
 

@@ -8,4 +8,4 @@ To compile and run the reveal.js slides, in the slides folder run:
 To run the simpleApi used in examples, in the simpleApi folder run:
 
 On windows:
-`set DEBUG=simpleApi & npm start`
+`node .\app.js`

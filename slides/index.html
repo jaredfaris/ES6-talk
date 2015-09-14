@@ -339,8 +339,8 @@
                         <h2>Shorter Functions</h2>
                         <script src="samples/arrow-1-long-functions.js"></script>
                         <script src="samples/arrow-1-short-functions.js"></script>
-                        <button id="arrowButton1" onclick="na1Demo()">Long!</button>
-                        <button id="arrowButton2" onclick="na1Demo2()">Short!</button>
+                        <button id="arrowButton1long" onclick="na1Demo()">Long!</button>
+                        <button id="arrowButton1short" onclick="na1Demo2()">Short!</button>
                     </section>
 
                     <section>
@@ -353,6 +353,11 @@
 
                     <section>
                         <h2>Lexical This</h2>
+                        <button id="arrowButton2confusing">Confusing!</button>
+                        <button id="arrowButton2clearer">Clearer!</button>
+                        <script src="samples/arrow-2-confusing-this.js"></script>
+                        <script src="samples/arrow-2-clearer-this.js"></script>
+
                     </section>
 
                     <section>
@@ -361,6 +366,13 @@
                             <li class="fragment">When creating methods (reusable function objects), use functions.</li>
                             <li class="fragment">When creating subroutins/callbacks, use arrows.</li>
                         </ul>
+                    </section>
+
+                    <section>
+                        <h2>Bonus: Immediately Invoked Arrow Functions</h2>
+                        <pre><code>
+    (x => x^2)(9); // 81
+                        </code></pre>
                     </section>
 
                     <section>

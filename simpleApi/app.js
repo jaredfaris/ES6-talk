@@ -12,22 +12,30 @@ app.get('/', function (req, res) {
   res.send('Hello World!');
 });
 
-app.get('/json/', function (req, res) {
-  res.json({users: [
-    {
-      username: "Jim",
-      email: "jim@example.org"
-    },
-    {
-      username: "Mary",
-      email: "mary@example.org"
-    },
-    {
-      username: "Al",
-      email: "al@example.org"
-    }
-  ]});
-})
+var people = [
+  {
+    username: "Jim",
+    email: "jim@example.org"
+  },
+  {
+    username: "Mary",
+    email: "mary@example.org"
+  },
+  {
+    username: "Al",
+    email: "al@example.org"
+  }
+];
+
+app.get('/people/', function (req, res) {
+  res.json({users: people});
+});
+
+app.get('/person/:personId', function(req, res){
+  var personId = req.params.personId;
+
+  res.json(people[personId]);
+});
 
 var server = app.listen(3000, function () {
   var host = server.address().address;
