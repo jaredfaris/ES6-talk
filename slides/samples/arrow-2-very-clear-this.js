@@ -1,4 +1,4 @@
-function arrow2Demo2() {
+function arrow2Demo3() {
     this.userId = 2;
 
     debugger;
@@ -8,19 +8,17 @@ function arrow2Demo2() {
         console.log("Email: " + person.email);
     };
 
-    var self = this;
-
     // ajax method defined in arrow-1-long-functions.js
-    na1Get('http://localhost:3000/person/' + this.userId, function(data) {
+    na1Get('http://localhost:3000/person/' + this.userId, (data) => {
         debugger;
 
         // What is going to happen here?
         var data = JSON.parse(data);
-        self.writePersonDetails(data);
+        this.writePersonDetails(data);
 
     }, function(data){
         console.log("error");
     });
 }
 
-document.getElementById("arrowButton2clearer").addEventListener("click", arrow2Demo2);
+document.getElementById("arrowButton2veryclear").addEventListener("click", arrow2Demo3);

@@ -352,12 +352,25 @@
                     </section>
 
                     <section>
+                        <h2>Lexical?</h2>
+                        <ul>
+                            <li class="fragment">Lexical scoping - scope is defined by where a function is defined</li>
+                            <li class="fragment">Dynamic scoping - scope is defined by the program's state at execution</li>
+                            <li class="fragment">JavaScript is generally lexically scoped</li>
+                            <li class="fragment">Depending on how you copy or refer to a function, you may change `this`</li>
+                            <li class="fragment">This is very confusing</li>
+                        </ul>
+                    </section>
+
+                    <section>
                         <h2>Lexical This</h2>
                         <button id="arrowButton2confusing">Confusing!</button>
                         <button id="arrowButton2clearer">Clearer!</button>
+                        <button id="arrowButton2veryclear">Yay!</button>
+
                         <script src="samples/arrow-2-confusing-this.js"></script>
                         <script src="samples/arrow-2-clearer-this.js"></script>
-
+                        <script src="samples/arrow-2-very-clear-this.js"></script>
                     </section>
 
                     <section>
