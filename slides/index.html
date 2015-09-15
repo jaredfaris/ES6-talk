@@ -371,6 +371,10 @@
                         <script src="samples/arrow-2-confusing-this.js"></script>
                         <script src="samples/arrow-2-clearer-this.js"></script>
                         <script src="samples/arrow-2-very-clear-this.js"></script>
+
+                        <aside class="notes">
+                            More details on scoping and closures: http://spin.atomicobject.com/2014/10/20/javascript-scope-closures/
+                        </aside>
                     </section>
 
                     <section>
@@ -401,11 +405,99 @@
                 </section>
 
                 <section>
+                    <section>
+                        <h2>Promises and Futures</h2>
+                        <ul>
+                            <li class="fragment">Future - a value that will be set at some point in the future</li>
+                            <li class="fragment">Promise - An asynchronous function that will set this value</li>
+                            <li class="fragment">Used in asynchronous programming to allow parallel processing</li>
+                            <li class="fragment">Allows you to proxy something that hasn't actually been set yet in code</li>
+                            <li class="fragment">Useful for reducing callback chains</li>
+                        </ul>
+
+                        <aside class="notes">
+                            Thanks wiki: https://en.wikipedia.org/wiki/Futures_and_promises
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h2>Callbacks</h2>
+                        <pre><code>
+    //asyncCall(successCallback, errorCallback)
+    asyncCall(function(data) {
+        // if successful, make another call with the data
+        asyncCall2(data.someProperty, function(data) {
+            // do something
+            asyncCall3(data.someOtherProperty, function(data) {
+                // do something else
+            }
+        }, function (data) {
+            // error handling
+        }
+    }, function(data) {
+        // error handling
+    }
+                        </code></pre>
+
+                        <p class="fragment">Pyramid coding</p>
+                    </section>
+
+                    <section>
+                        <h2>Promises</h2>
+                    <pre><code>
+    asyncCall()
+        .then((data) => asyncCall2(data.someProperty))
+        .then((data) => asyncCall3(data.someOtherProperty))
+        .error((data) => {
+            // error handling
+        })
+                    </code></pre>
+                    </section>
+
+                    <section>
+                        <h2>Ajax Promises</h2>
+
+                        <button id="promiseButton1">Go!</button>
+                        <script src="samples/promises-1-ajax.js"></script>
+                    </section>
+
+                    <section>
+                        <h2>Post-resolve Behavior</h2>
+                        <button id="promiseButton2">Go?</button>
+                        <script src="samples/promises-2-post-resolve.js"></script>
+                    </section>
+
+                    <section>
+                        <h2>Support</h2>
+                        <p>Edge, Chrome, Firefox, Safari 9</p>
+                        <p>'use strict' again</p>
+                    </section>
+                </section>
+
+                <section>
                     <h1>Default Parameters</h1>
                 </section>
 
                 <section>
-                    <h2>Generator Methods</h2>
+                    <section>
+                        <h2>Setting up Default Parameters</h2>
+                        <pre><code>
+    function callService(data, version = 3.0) {
+        //stuff
+    }
+                        </code></pre>
+
+                        <p><i>Firefox only as of 9/14/2015</i></p>
+                    </section>
+
+                    <section>
+                        <h2>Evaluated every call</h2>
+
+                        <script src="samples/default-params-1-evaluation.js"></script>
+                        <button id="defaultParamsButton1" onclick="defaultParamsDemo1()">Without Default</button>
+                        <button id="defaultParamsButton2" onclick="defaultParamsDemo2()">With Default</button>
+                    </section>
+
                 </section>
 
                 <section>
@@ -413,18 +505,64 @@
                 </section>
 
                 <section>
+                    <h2>String Formatting</h2>
+                    <pre><code>
+    console.log(`HTTP ${errorNumber} returned from ${errorURL}`);
+
+    console.log(`2 + 2 = ${2+2}`);
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h2>Generator Methods</h2>
+                </section>
+
+                <section>
                     <h1>Modules</h1>
                 </section>
 
                 <section>
-                    <h1>Imports</h1>
+                    <section>
+                        <h2>Built in Modules</h2>
+
+                        <p>Similar in concept to AMD or CommonJS patterns.</p>
+                    </section>
+
+                    <section>
+                        <h2>Export and Import</h2>
+                        <p>export.js</p>
+                        <pre><code>
+    export function module1ConsoleLogger () {
+        console.log("Foo"); // writes "Foo"
+    }
+                        </code></pre>
+
+                        <p>import.js</p>
+
+                        <pre><code>
+    import {module1ConsoleLogger} from "module-1-export.js"
+
+    function module1Demo() {
+        module1ConsoleLogger();
+    }
+                        </code></pre>
+                    </section>
+
+                    <section>
+                        <h2>Limitations</h2>
+                        <p>You can't use these anywhere yet.</p>
+                    </section>
+
                 </section>
 
                 <section>
-                    <h1>Array Comprehensions</h1>
+                    <h1>Support & Transpiling</h1>
                 </section>
 
-                <section>Support & Transpiling</section>
+                <section>
+                    <h2>Backwards Compatibility</h2>
+                    <a href="https://github.com/addyosmani/es6-equivalents-in-es5#modules">https://github.com/addyosmani/es6-equivalents-in-es5#modules</a>
+                </section>
 
             </div>
 
