@@ -132,6 +132,21 @@ module.exports = function(grunt) {
 			html: {
 				files: [ 'index.html']
 			}
+		},
+
+		"babel": {
+			options: {
+				sourceMap: true
+			},
+			dist: {
+				files: [{
+					expand: true,
+					cwd: 'samples',
+					src: ['**/*.js'],
+					dest: 'samples-dist',
+					ext: '.js'
+				}]
+			}
 		}
 
 	});
@@ -146,6 +161,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks( 'grunt-contrib-connect' );
 	grunt.loadNpmTasks( 'grunt-autoprefixer' );
 	grunt.loadNpmTasks( 'grunt-zip' );
+	grunt.loadNpmTasks( 'grunt-babel');
 
 	// Default task
 	grunt.registerTask( 'default', [ 'css', 'js' ] );
@@ -170,5 +186,8 @@ module.exports = function(grunt) {
 
 	// Run tests
 	grunt.registerTask( 'test', [ 'jshint', 'qunit' ] );
+
+	// Babel ES6 transpiling
+	grunt.registerTask("transpile", ["babel"]);
 
 };
