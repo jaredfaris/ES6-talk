@@ -8,7 +8,7 @@ function generators1Demo() {
 
         for(let fragmentIndex in fragments) {
             debugger;
-            
+
             let fragment = fragments[fragmentIndex];
             yield fragment;
         }

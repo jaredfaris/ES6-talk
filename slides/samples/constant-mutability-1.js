@@ -14,8 +14,8 @@ function constantMutabilityDemo1 () {
 
     debugger;
     // This would error
-    MY_BOOK_CONST = {
-        title: "Third Title",
-        author: "John Smith"
-    };
+    //MY_BOOK_CONST = {
+    //    title: "Third Title",
+    //    author: "John Smith"
+    //};
 }
