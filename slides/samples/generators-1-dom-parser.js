@@ -7,6 +7,8 @@ function generators1Demo() {
         var fragments = document.querySelectorAll("li.fragment");
 
         for(let fragmentIndex in fragments) {
+            debugger;
+            
             let fragment = fragments[fragmentIndex];
             yield fragment;
         }
