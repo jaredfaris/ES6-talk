@@ -300,6 +300,10 @@
         constructor(emailAddress) {
             this.emailAddress = emailAddress;
         }
+
+        updateEmail(newAddress) {
+            // some code
+        }
     }
                         </code></pre>
                     </section>
@@ -319,6 +323,10 @@
         }
     }
                         </code></pre>
+
+                        <aside class="notes">
+                            In the second version (with a named expression), it only has value internally to the expression itself
+                        </aside>
                     </section>
 
                     <section>
@@ -350,6 +358,10 @@
                         <p>Calls the corresponding function or constructor on the parent class.</p>
                         <script src="samples/using-classes-5-super.js"></script>
                         <button id="usingClasses5Button" onclick="usingClasses5()">Go!</button>
+
+                        <aside class="notes">
+                            In the constructor, you must call "super" before you can use "this";
+                        </aside>
                     </section>
 
                     <section>
@@ -403,8 +415,7 @@
                     <section>
                         <h2>Arrow Function Syntax</h2>
 
-                        <pre>
-                            <code>
+                        <pre><code>
     var oldWay = function (param1, param2) {
         // do stuff
     };
@@ -412,8 +423,7 @@
     var newWay = (param1, param2) => {
         // do stuff
     };
-                            </code>
-                        </pre>
+                        </code></pre>
                     </section>
 
                     <section>

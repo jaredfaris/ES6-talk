@@ -4,7 +4,7 @@
 
 class RealMemberProfile extends Profile {
     constructor(emailAddress, memberId) {
-        super(emailAddress);
+        super(emailAddress); // this must come first before using this.
         this._memberId = memberId;
     }
 

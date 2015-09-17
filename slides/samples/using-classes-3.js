@@ -10,6 +10,10 @@ class MyComplexClass {
     set myProp(value) {
         this._myPseudoPrivateVar = "setter_" + value;
     }
+
+    get myGetterProp() {
+        return "hi";
+    }
 }
 
 function usingClasses3() {
@@ -22,4 +26,6 @@ function usingClasses3() {
     mcc.myProp = "bar";
 
     console.log(mcc.myProp);
+
+    mcc.myGetterProp = "test";
 }
