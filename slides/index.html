@@ -445,6 +445,7 @@
 
                     <section>
                         <h2>Shorter Functions</h2>
+                        <script src="samples/arrow-1-ajax.js"></script>
                         <script src="samples/arrow-1-long-functions.js"></script>
                         <script src="samples/arrow-1-short-functions.js"></script>
                         <button id="arrowButton1long" onclick="na1Demo()">Long!</button>
@@ -457,6 +458,24 @@
                         <img src="images/arrow-functions/simplification1.png">
 
                         <p class="fragment"><i>Arrow... see what I did there?</i></p>
+                    </section>
+
+                    <section>
+                        <h2>Cleaner Syntax</h2>
+
+                        <pre><code>
+    var people = [{name: "John"}, {name: "Amy"}];
+
+    people.map(function(person){
+        return person.name;
+    }).forEach(function(name){
+        console.log(name);
+    });
+
+    people
+        .map((person) => person.name)
+        .forEach((name) => console.log(name));
+                        </code></pre>
                     </section>
 
                     <section>
@@ -490,6 +509,7 @@
                         <ul>
                             <li class="fragment">When creating methods (reusable function objects), use functions.</li>
                             <li class="fragment">When creating subroutins/callbacks, use arrows.</li>
+                            <li class="fragment">Really good when chaining functional methods</li>
                         </ul>
                     </section>
 
@@ -571,6 +591,7 @@
 
                     <section>
                         <h2>Post-resolve Behavior</h2>
+                        <p>Attaching another "then" to a resolved promise automatically causes it to trigger.</p>
                         <button id="promiseButton2">Go?</button>
                         <script src="samples/promises-2-post-resolve.js"></script>
                     </section>
@@ -602,8 +623,7 @@
                         <h2>Evaluated every call</h2>
 
                         <script src="samples/default-params-1-evaluation.js"></script>
-                        <button id="defaultParamsButton1" onclick="defaultParamsDemo1()">Without Default</button>
-                        <button id="defaultParamsButton2" onclick="defaultParamsDemo2()">With Default</button>
+                        <button id="defaultParamsButton2" onclick="defaultParamsDemo2()">Go</button>
                     </section>
 
                 </section>

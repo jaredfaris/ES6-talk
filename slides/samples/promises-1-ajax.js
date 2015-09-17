@@ -2,8 +2,6 @@
 
 // basically a simple version of $.get
 function promiseGet(url, success, error){
-    debugger;
-
     var promise = new Promise(function(resolve, reject){
         var request = new XMLHttpRequest();
         request.open('GET', url, true);

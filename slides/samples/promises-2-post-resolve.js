@@ -22,6 +22,7 @@ function promiseDemo2() {
 
     setTimeout(() => {
         console.log("Attaching a 'then' now.");
+        debugger; // look at the status of the promise
 
         myPromise.then(() => {
             console.log("Hi");
