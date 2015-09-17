@@ -68,6 +68,60 @@
 				</section>
 
                 <section>
+                    <section>
+                        <h2>But first...</h2>
+                        <p>Some fun JS to break the ice</p>
+                    </section>
+
+                    <section>
+                        <h2>JavaScript is object oriented</h2>
+
+                        <pre class="fragment"><code>
+    // what does this do?
+    "hello".toUpperCase();
+                        </code></pre>
+
+                        <pre class="fragment"><code>
+    // so then what does this do?
+    2.toString();
+                        </code></pre>
+
+                        <aside class="notes">
+                            These both work:
+
+                            2.0.toString();
+                            2..toString();
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h2>JavaScript Parameters</h2>
+
+                        <pre class="fragment"><code>
+    function test() {
+        // what code goes here?
+    }
+
+    test("FooBar"); // to get the console to say "FooBar"
+                        </code></pre>
+
+                        <pre class="fragment"><code>
+    function test() {
+        console.log(arguments[0]);
+    }
+
+    test("FooBar");
+                        </code></pre>
+                    </section>
+                    <section>
+                        <h2>Type Conversions</h2>
+                        <p class="fragment">
+    []+(-~function(){}-~function(){}-~function(){}-~function(){}) + (-~function(){}-~function(){})
+                        </p>
+                    </section>
+                </section>
+
+                <section>
                     <h2>Support</h2>
                     <img src="images/browser-support/chart.PNG">
                     <p><a href="https://kangax.github.io/compat-table/es6/">https://kangax.github.io/compat-table/es6/</a></p>
