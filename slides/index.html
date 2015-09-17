@@ -16,7 +16,7 @@
 
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/custom.css">
-		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+		<link rel="stylesheet" href="css/theme/custom-blue.css" id="theme">
 
 		<!-- Code syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -40,7 +40,7 @@
 		<div class="reveal">
 
 			<div class="slides">
-				<section>
+				<section class="topic" data-background="#004676">
 					<h1>ECMAScript 2015 & JavaScript</h1>
 					<h3>Don't Get Left Behind</h3>
 					<p>
@@ -63,6 +63,7 @@
                             <li class="fragment">Netscape gave JavaScript to Ecma International in 1996</li>
                             <li class="fragment">... versions get released ...</li>
                             <li class="fragment">ES6 is finalized in 2015</li>
+                            <li class="fragment">Browsers support ES6 in ... 2015? 2016?</li>
                         </ul>
                     </section>
 				</section>
@@ -91,6 +92,8 @@
 
                             2.0.toString();
                             2..toString();
+
+                            The parser expects the period to be followed by a number like 2.3
                         </aside>
                     </section>
 
@@ -112,13 +115,34 @@
 
     test("FooBar");
                         </code></pre>
+
+                        <aside class="notes">
+                            Parameters in JavaScript are almost syntactic sugar over the arguments object
+                        </aside>
                     </section>
                     <section>
                         <h2>Type Conversions</h2>
+
+                        <p class="small">What does this return?</p>
+
                         <p class="fragment">
     []+(-~function(){}-~function(){}-~function(){}-~function(){}) + (-~function(){}-~function(){})
                         </p>
+
+                        <aside class="notes">
+                            The ~ operater will add 1 to a number and then multiply the new total by -1.
+
+                            ~function(){} would become -1 because it tries to typecast function to a number and gets 0
+
+                            So you have [] + 4 + 2
+                            4 + 2 would equal 6, but the array tells it to typecast those to something that can be concatenated to an array. in this case a string.
+                        </aside>
                     </section>
+                </section>
+
+                <section data-background="#004676">
+                    <h1>JavaScript is weird</h1>
+                    <p class="fragment">ES6 adds useful features onto this weirdness</p>
                 </section>
 
                 <section>
@@ -127,11 +151,15 @@
                     <p><a href="https://kangax.github.io/compat-table/es6/">https://kangax.github.io/compat-table/es6/</a></p>
                 </section>
 
-				<section>
+				<section data-background="#004676">
 					<h1>Variable Scoping</h1>
 				</section>
 
                 <section>
+                    <section>
+                        <h2>Variable Hoisting</h2>
+                        <p>Variables can be used before they are declared because of how JS is parsed.</p>
+                    </section>
                     <section>
                         <h2>Hoisting Example</h2>
                         <script src="samples/variable-scoping-1.js"></script>
@@ -158,15 +186,16 @@
                         <ul>
                             <li>Global</li>
                             <li>Function</li>
+                            <li><i>What's missing here?</i></li>
                         </ul>
                     </section>
                     <section>
                         <h2>Function Scope Demo</h2>
                         <script src="samples/function-scoping-1.js"></script>
                         <script src="samples/function-scoping-2.js"></script>
-                        <button id="functionScopeDemo1button" onclick="functionScopingDemo1()">Global!</button>
+                        <button id="functionScopeDemo1button" onclick="functionScopingDemo1()">Block Scope?</button>
                         &nbsp;
-                        <button id="functionScopeDemo2button" onclick="functionScopingDemo2()">Function!</button>
+                        <button id="functionScopeDemo2button" onclick="functionScopingDemo2()">Function Scope!</button>
                     </section>
                 </section>
 
@@ -258,7 +287,7 @@
                     </section>
                 </section>
 
-                <section>
+                <section data-background="#004676">
                     <h1>Classes</h1>
                 </section>
 
@@ -366,7 +395,7 @@
                     </section>
                 </section>
 
-                <section>
+                <section data-background="#004676">
                     <h1>Arrow Functions</h1>
                 </section>
 
@@ -469,7 +498,7 @@
                     </section>
                 </section>
 
-                <section>
+                <section data-background="#004676">
                     <h1>Promises</h1>
                 </section>
 
@@ -543,7 +572,7 @@
                     </section>
                 </section>
 
-                <section>
+                <section data-background="#004676">
                     <h1>Default Parameters</h1>
                 </section>
 
@@ -569,7 +598,7 @@
 
                 </section>
 
-                <section>
+                <section data-background="#004676">
                     <h1>Template Strings</h1>
                 </section>
 
@@ -591,7 +620,7 @@
                     </section>
                 </section>
 
-                <section>
+                <section data-background="#004676">
                     <h1>Generator Methods</h1>
                 </section>
 
@@ -614,7 +643,7 @@
                     </section>
                 </section>
 
-                <section>
+                <section data-background="#004676">
                     <h1>Modules</h1>
                 </section>
 
@@ -652,7 +681,7 @@
 
                 </section>
 
-                <section>
+                <section data-background="#004676">
                     <h1>Support & Transpiling</h1>
                 </section>
 

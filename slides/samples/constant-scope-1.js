@@ -16,4 +16,10 @@ function constantScopeDemo1() {
         // do nothing
     }
     console.log(MY_CONST);
+
+    // Without "use strict" I can't include this. Chrome doesn't see the block scope and errors.
+    //if(true){
+    //    const MY_CONST = 99;
+    //    console.log(MY_CONST);
+    //}
 }

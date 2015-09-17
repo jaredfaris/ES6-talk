@@ -4,7 +4,7 @@ function variableScopingDemo1() {
     debugger;
 
     setTimeout(function(){
-        alert(myText);
+        console.log(myText);
     }, 1000);
 
     var myText = "I'm a string!";

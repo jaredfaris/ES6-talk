@@ -18,6 +18,7 @@ function constantScopeDemo2() {
     }
     console.log(MY_CONST);
 
+    // With "use strict", it doesn't see this as a conflict
     if(true){
         const MY_CONST = 99;
         console.log(MY_CONST);
