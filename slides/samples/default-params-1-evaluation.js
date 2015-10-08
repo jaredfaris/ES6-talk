@@ -4,10 +4,10 @@
 function defaultParamsDemo2() {
     debugger;
 
-    function stringConcat(value, myString = ""){
+    function stringConcat(firstWord, secondWord = ""){
         // notice the value of myString the second time through
-        myString += value;
-        return myString;
+        secondWord += firstWord;
+        return secondWord;
     }
 
     console.log(stringConcat("Foo"));
