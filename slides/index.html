@@ -86,6 +86,23 @@
                     </section>
 
                     <section>
+                        <script src="samples/ecmascript-timeline.js"></script>
+
+                        <div id="ecmascriptTimelineViewport">
+                            <img class="preventResizing preventStyles" src="images/ecmascript-history/ecmascript-timeline.png" id="ecmascriptTimeline">
+                        </div>
+
+                        <div id="ecmascriptTimelineControls">
+                            <p id="ecmascriptTimelineTitle"></p>
+
+                            <div id="ecmascriptTimelineFirst" class="prevNextButton">&lt;&lt;</div>
+                            <div id="ecmascriptTimelineLeft" class="prevNextButton">&lt;</div>
+                            <div id="ecmascriptTimelineRight" class="prevNextButton">&gt;</div>
+                            <div id="ecmascriptTimelineLast" class="prevNextButton">&gt;&gt;</div>
+                        </div>
+                    </section>
+
+                    <section>
                         <h2>JavaScript</h2>
                         <ul>
                             <li class="fragment">Brendan Eich invented Mocha at Netscape</li>
@@ -132,7 +149,7 @@
                     <section>
                         <h2>JavaScript Parameters</h2>
 
-                        <script src="samples-dist/fooBarConsoleTest.js"></script>
+                        <script src="samples/fooBarConsoleTest.js"></script>
 
                         <pre class="fragment"><code>
     function fooBarConsoleTest() {
@@ -224,7 +241,7 @@
                     </section>
                     <section>
                         <h2>Hoisting Example</h2>
-                        <script src="samples-dist/variable-scoping-1.js"></script>
+                        <script src="samples/variable-scoping-1.js"></script>
                         <button id="variableScopringDemo1button" onclick="variableScopingDemo1()">Go!</button>
 
                         <aside class="notes">
@@ -253,8 +270,8 @@
                     </section>
                     <section>
                         <h2>Function Scope Demo</h2>
-                        <script src="samples-dist/function-scoping-1.js"></script>
-                        <script src="samples-dist/function-scoping-2.js"></script>
+                        <script src="samples/function-scoping-1.js"></script>
+                        <script src="samples/function-scoping-2.js"></script>
                         <button id="functionScopeDemo1button" onclick="functionScopingDemo1()">Block Scope?</button>
                         &nbsp;
                         <button id="functionScopeDemo2button" onclick="functionScopingDemo2()">Function Scope!</button>
@@ -279,14 +296,14 @@
                     </section>
                     <section>
                         <h2>Let Demo</h2>
-                        <script src="samples-dist/let-scoping-1.js"></script>
-                        <script src="samples-dist/let-scoping-1.js" type="application/javascript;version=1.7"></script>
+                        <script src="samples/let-scoping-1.js"></script>
+                        <script src="samples/let-scoping-1.js" type="application/javascript;version=1.7"></script>
                         <button id="letScopeDemo1button" onclick="letScopingDemo1()">Go!</button>
                     </section>
                     <section>
                         <h2>Let <strike>Hoisting</strike></h2>
-                        <script src="samples-dist/let-hoisting-1.js"></script>
-                        <script src="samples-dist/let-hoisting-1.js" type="application/javascript;version=1.7"></script>
+                        <script src="samples/let-hoisting-1.js"></script>
+                        <script src="samples/let-hoisting-1.js" type="application/javascript;version=1.7"></script>
                         <button id="letHoistingDemo1button" onclick="letHoistingDemo1()">Go!</button>
 
                         <p>This is known as the "Temporal Dead Zone"</p>
@@ -322,19 +339,19 @@
                         <h2>Immutability</h2>
                         <p>Constants don't hold immutable values, they hold read-only references to a value.</p>
 
-                        <script src="samples-dist/constant-mutability-1.js"></script>
+                        <script src="samples/constant-mutability-1.js"></script>
                         <button id="constantMutabilityDemo1button" onclick="constantMutabilityDemo1()">Go!</button>
                     </section>
                     <section>
                         <h2>"Use Strict" Behavior</h2>
-                        <script src="samples-dist/constant-scope-2.js"></script>
+                        <script src="samples/constant-scope-2.js"></script>
                         <button id="constantScopeDemo2button" onclick="constantScopeDemo2()">Go!</button>
                     </section>
                     <section>
                         <h2>Without "Use Strict" Scope</h2>
                         <p>The block scope part of the constant doesn't get enforced.</p>
 
-                        <script src="samples-dist/constant-scope-1.js"></script>
+                        <script src="samples/constant-scope-1.js"></script>
                         <button id="constantScopeDemo1button" onclick="constantScopeDemo1()">Go!</button>
 
                     </section>
@@ -394,32 +411,32 @@
 
                     <section>
                         <h2>Using a Class</h2>
-                        <script src="samples-dist/using-classes-1.js"></script>
+                        <script src="samples/using-classes-1.js"></script>
                         <button id="usingClasses1Button" onclick="usingClasses1()">Go!</button>
                     </section>
 
                     <section>
                         <h2>Classes are Functions</h2>
-                        <script src="samples-dist/using-classes-2.js"></script>
+                        <script src="samples/using-classes-2.js"></script>
                         <button id="usingClasses2Button" onclick="usingClasses2()">Go!</button>
                     </section>
 
                     <section>
                         <h2>Setters and Getters</h2>
-                        <script src="samples-dist/using-classes-3.js"></script>
+                        <script src="samples/using-classes-3.js"></script>
                         <button id="usingClasses3Button" onclick="usingClasses3()">Go!</button>
                     </section>
 
                     <section>
                         <h2>Inheritance & Subclassing</h2>
-                        <script src="samples-dist/using-classes-4-inheritance.js"></script>
+                        <script src="samples/using-classes-4-inheritance.js"></script>
                         <button id="usingClasses4Button" onclick="usingClasses4()">Go!</button>
                     </section>
 
                     <section>
                         <h2>Super</h2>
                         <p>Calls the corresponding function or constructor on the parent class.</p>
-                        <script src="samples-dist/using-classes-5-super.js"></script>
+                        <script src="samples/using-classes-5-super.js"></script>
                         <button id="usingClasses5Button" onclick="usingClasses5()">Go!</button>
 
                         <aside class="notes">
@@ -430,14 +447,14 @@
                     <section>
                         <h2>Static Methods</h2>
                         <p>Methods that exist on the class, and not on instances of it.</p>
-                        <script src="samples-dist/using-classes-6-static.js"></script>
+                        <script src="samples/using-classes-6-static.js"></script>
                         <button id="usingClasses6Button" onclick="usingClasses6()">Go!</button>
                     </section>
 
                     <section>
                         <h2>Hoisting Differences</h2>
                         <p>Class declarations are not hoisted!</p>
-                        <script src="samples-dist/using-classes-7-hoisting.js"></script>
+                        <script src="samples/using-classes-7-hoisting.js"></script>
                         <button id="usingClasses7Button" onclick="usingClasses7a()">Nope!</button>
                         <button id="usingClasses7Button2" onclick="usingClasses7b()">Yep!</button>
 
@@ -446,7 +463,7 @@
                     <section>
                         <h2>Prototypical Inheritance</h2>
                         <p>Classes are syntactical sugar over PI. You can still use the object's prototype</p>
-                        <script src="samples-dist/using-classes-8-prototyping.js"></script>
+                        <script src="samples/using-classes-8-prototyping.js"></script>
                         <button id="usingClasses8Button" onclick="usingClasses8()">Go!</button>
 
                         <aside class="notes">
@@ -508,9 +525,9 @@
 
                     <section>
                         <h2>Shorter Functions</h2>
-                        <script src="samples-dist/arrow-1-ajax.js"></script>
-                        <script src="samples-dist/arrow-1-long-functions.js"></script>
-                        <script src="samples-dist/arrow-1-short-functions.js"></script>
+                        <script src="samples/arrow-1-ajax.js"></script>
+                        <script src="samples/arrow-1-long-functions.js"></script>
+                        <script src="samples/arrow-1-short-functions.js"></script>
                         <button id="arrowButton1long" onclick="na1Demo()">Long!</button>
                         <button id="arrowButton1short" onclick="na1Demo2()">Short!</button>
                     </section>
@@ -558,9 +575,9 @@
                         <button id="arrowButton2clearer">Clearer!</button>
                         <button id="arrowButton2veryclear">Yay!</button>
 
-                        <script src="samples-dist/arrow-2-confusing-this.js"></script>
-                        <script src="samples-dist/arrow-2-clearer-this.js"></script>
-                        <script src="samples-dist/arrow-2-very-clear-this.js"></script>
+                        <script src="samples/arrow-2-confusing-this.js"></script>
+                        <script src="samples/arrow-2-clearer-this.js"></script>
+                        <script src="samples/arrow-2-very-clear-this.js"></script>
 
                         <aside class="notes">
                             More details on scoping and closures: http://spin.atomicobject.com/2014/10/20/javascript-scope-closures/
@@ -649,14 +666,14 @@
                         <h2>Ajax Promises</h2>
 
                         <button id="promiseButton1">Go!</button>
-                        <script src="samples-dist/promises-1-ajax.js"></script>
+                        <script src="samples/promises-1-ajax.js"></script>
                     </section>
 
                     <section>
                         <h2>Post-resolve Behavior</h2>
                         <p>Attaching another "then" to a resolved promise automatically causes it to trigger.</p>
                         <button id="promiseButton2">Go?</button>
-                        <script src="samples-dist/promises-2-post-resolve.js"></script>
+                        <script src="samples/promises-2-post-resolve.js"></script>
                     </section>
 
                     <section>
@@ -685,7 +702,7 @@
                     <section>
                         <h2>Evaluated every call</h2>
 
-                        <script src="samples-dist/default-params-1-evaluation.js"></script>
+                        <script src="samples/default-params-1-evaluation.js"></script>
                         <button id="defaultParamsButton2" onclick="defaultParamsDemo2()">Go</button>
                     </section>
 
@@ -707,7 +724,7 @@
 
                     <section>
                         <h2>Template Example</h2>
-                        <script src="samples-dist/template-1-ajax.js"></script>
+                        <script src="samples/template-1-ajax.js"></script>
                         <button id="template1Button" onclick="template1Demo()">Go!</button>
 
                     </section>
@@ -728,7 +745,7 @@
                     </section>
                     <section>
                         <h2>Generator Methods Demo</h2>
-                        <script src="samples-dist/generators-1-dom-parser.js"></script>
+                        <script src="samples/generators-1-dom-parser.js"></script>
                         <button id="generator1Button" onclick="generators1Demo()">Go!</button>
                     </section>
                     <section>
