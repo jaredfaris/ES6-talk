@@ -1,0 +1,160 @@
+<html>
+<head>
+    <title>Test</title>
+
+    <style>
+        body {
+            background-color: #017EC2;
+        }
+
+        #ecmascriptTimelineViewport {
+            width: 800px;
+            border: 4px solid #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            background: #fff;
+            padding-top: 100px;
+            margin: 0px auto;
+        }
+
+        #ecmascriptTimeline {
+            position: relative;
+            transition:all 1s ease;
+            left: 0;
+        }
+
+        #ecmascriptTimelineControls {
+            width: 300px;
+            margin: 0px auto;
+            text-align: center;
+            margin-top: 40px;
+            font-size: 0;
+        }
+
+        #ecmascriptTimelineControls .prevNextButton {
+            display: inline-block;
+            padding: 15px 25px;
+            background-color: #fff;
+            border-radius: 3px;
+            font-size: 18px;
+        }
+
+        #ecmascriptTimelineControls .prevNextButton:not(:first-of-type) {
+            margin-left: 20px;
+        }
+
+        #ecmascriptTimelineControls .prevNextButton:hover {
+            background-color: #8dcffc;
+        }
+        #ecmascriptTimelineControls .prevNextButton:active {
+            background-color: #42affa;
+        }
+    </style>
+
+    <script>
+        "use strict"
+        class timelineManager {
+            constructor(steps, timelineImageId) {
+                this.steps = steps;
+                this.timelineImage = document.getElementById(timelineImageId);
+                this.counter = 0;
+                this.maxCounter = steps.length - 1; //accounts for 0 index
+
+                this.shiftTimeline = () => {
+                    this.timelineImage.style.transform = `translate(${this.steps[this.counter].pos},0)`;
+                }
+            }
+
+            next() {
+                if(this.counter < this.maxCounter)
+                    this.counter++;
+
+                this.shiftTimeline();
+            }
+
+            prev() {
+                if(this.counter > 0)
+                    this.counter--;
+
+                this.shiftTimeline();
+            }
+
+            first() {
+                this.counter = 0;
+                this.shiftTimeline();
+            }
+
+            last() {
+                this.counter = this.maxCounter;
+                this.shiftTimeline();
+            }
+        }
+
+        var timelineData = [
+            {
+                name: "mocha",
+                pos: 0
+            },
+            {
+                name: "ecmascript1",
+                pos: "-430px"
+            },
+            {
+                name: "ecmascript2",
+                pos: "-750px"
+            },
+            {
+                name: "ecmascript3",
+                pos: "-1300px"
+            },
+            {
+                name: "firefoxreleased",
+                pos: "-1700px"
+            },
+            {
+                name: "chromereleased",
+                pos: "-3370px"
+            },
+            {
+                name: "ecmascript5",
+                pos: "-4000px"
+            },
+            {
+                name: "ecmascript51",
+                pos: "-4400px"
+            },
+            {
+                name: "ecmascript6",
+                pos: "-5460px"
+            },
+            {
+                name: "future",
+                pos: "-5600px"
+            }
+        ];
+
+
+        window.onload = () => {
+            var tm = new timelineManager(timelineData, "ecmascriptTimeline");
+            document.getElementById("ecmascriptTimelineFirst").onclick = () => tm.first();
+            document.getElementById("ecmascriptTimelineLeft").onclick = () => tm.prev();
+            document.getElementById("ecmascriptTimelineRight").onclick = () => tm.next();
+            document.getElementById("ecmascriptTimelineLast").onclick = () => tm.last();
+        }
+    </script>
+
+</head>
+
+<body>
+<div id="ecmascriptTimelineViewport">
+    <img src="images/ecmascript-history/ecmascript-timeline.png" id="ecmascriptTimeline">
+</div>
+
+<div id="ecmascriptTimelineControls">
+    <div id="ecmascriptTimelineFirst" class="prevNextButton">&lt;&lt;</div>
+    <div id="ecmascriptTimelineLeft" class="prevNextButton">&lt;</div>
+    <div id="ecmascriptTimelineRight" class="prevNextButton">&gt;</div>
+    <div id="ecmascriptTimelineLast" class="prevNextButton">&gt;&gt;</div>
+</div>
+</body>
+</html>
