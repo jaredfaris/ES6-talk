@@ -43,16 +43,24 @@ class timelineManager {
 
 var timelineData = [
     {
-        name: "Mocha Created",
+        name: "Brendan Eich invents Mocha @ Netscape",
         pos: 0
     },
     {
-        name: "ECMAScript 1 Published",
+        name: "Renamed to LiveScript and then JavaScript",
+        pos: "-200px"
+    },
+    {
+        name: "Netscape gave JS to Ecma International",
         pos: "-430px"
     },
     {
+        name: "ECMAScript 1 Published",
+        pos: "-650px"
+    },
+    {
         name: "ECMAScript 2 Published",
-        pos: "-750px"
+        pos: "-900px"
     },
     {
         name: "ECMASCript 3 Published",
