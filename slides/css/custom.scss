@@ -1,3 +1,52 @@
 button {
   font-size: 1.5em;
 }
+
+#ecmascriptTimelineViewport {
+  width: 800px;
+  border: 4px solid #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  background: #fff;
+  padding-top: 100px;
+  margin: 0px auto;
+}
+
+#ecmascriptTimeline {
+  position: relative;
+  transition:all 1s ease;
+  left: 0;
+}
+
+#ecmascriptTimelineTitle {
+  font-size: 18px;
+  color: #fff;
+}
+
+#ecmascriptTimelineControls {
+  width: 350px;
+  margin: 0px auto;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0;
+
+  .prevNextButton {
+    display: inline-block;
+    padding: 15px 25px;
+    background-color: #fff;
+    border-radius: 3px;
+    font-size: 18px;
+
+    &:not(:first-of-type) {
+      margin-left: 20px;
+    }
+
+    &:hover {
+      background-color: #8dcffc;
+    }
+
+    &:hover {
+      background-color: #8dcffc;
+    }
+  }
+}
