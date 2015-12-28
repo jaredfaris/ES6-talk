@@ -63,7 +63,7 @@ var timelineData = [
         pos: "-900px"
     },
     {
-        name: "ECMASCript 3 Published",
+        name: "ECMAScript 3 Published",
         pos: "-1300px"
     },
     {

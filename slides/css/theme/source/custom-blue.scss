@@ -28,7 +28,7 @@ $headingTextShadow: none;
 $headingLetterSpacing: normal;
 $headingTextTransform: uppercase;
 $headingFontWeight: 600;
-$linkColor: #42affa;
+$linkColor: #3df5ff;
 //$linkColor: #004676;
 $linkColorHover: lighten( $linkColor, 15% );
 $selectionBackgroundColor: lighten( $linkColor, 25% );
@@ -50,3 +50,16 @@ section.has-light-background {
 // Theme template ------------------------------
 @import "../template/theme";
 // ---------------------------------------------
+
+
+// overwriting some theme behaviors to support my sliding ECMAScript timeline
+
+.reveal img.preventResizing {
+  max-width: none;
+  max-height: none;
+}
+
+.reveal img.preventStyles {
+  border: none;
+  box-shadow: none;
+}

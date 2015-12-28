@@ -101,20 +101,6 @@
                             <div id="ecmascriptTimelineLast" class="prevNextButton">&gt;&gt;</div>
                         </div>
                     </section>
-
-                    <section>
-                        <h2>JavaScript</h2>
-                        <ul>
-                            <li class="fragment">Brendan Eich invented Mocha at Netscape</li>
-                            <li class="fragment">It became LiveScript</li>
-                            <li class="fragment">It became JavaScript in 1995</li>
-                            <li class="fragment">Microsoft released JScript in 1996</li>
-                            <li class="fragment">Netscape gave JavaScript to Ecma International in 1996</li>
-                            <li class="fragment">... versions get released ...</li>
-                            <li class="fragment">ES6 is finalized in 2015</li>
-                            <li class="fragment">Browsers support ES6 in ... 2015? 2016?</li>
-                        </ul>
-                    </section>
 				</section>
 
                 <section>
@@ -181,7 +167,16 @@
                         </p>
 
                         <aside class="notes">
-                            The ~ operater will add 1 to a number and then multiply the new total by -1.
+                            This is the "bitwise not" operator. It will take something's binary value and invert each number.
+
+                            0011 (3 in decimal) becomes
+                            1100 (-4 in decimal because of signed integers)
+
+                            The function is typecast to a 0 value.
+
+                            This happens because negative numbers in binary aren't just stored with a minus sign. The signed bit
+                            tells the number to be stored differently and the numbers are stored as an inverse of the positive number
+                            bitwise minus 1.
 
                             ~function(){} would become -1 because it tries to typecast function to a number and gets 0
 
