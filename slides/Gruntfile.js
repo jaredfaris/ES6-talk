@@ -148,6 +148,31 @@ module.exports = function(grunt) {
 					ext: '.js'
 				}]
 			}
+		},
+
+		copy: {
+			"indexDistHtml": {
+				files: [{
+					src: 'index.html',      // copy all files and subfolders **with ending .html**
+					dest: 'index-dist.html'    // destination folder
+				}]
+			}
+		},
+
+		"string-replace": {
+			"indexDistHtml": {
+				files: {
+					"index-dist.html": "index.html"
+				},
+				options: {
+					replacements: [
+						{
+							pattern: /src=\"samples\//ig,
+							replacement: "src=\"samples-dist/"
+						}
+					]
+				}
+			}
 		}
 
 	});
@@ -163,6 +188,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks( 'grunt-autoprefixer' );
 	grunt.loadNpmTasks( 'grunt-zip' );
 	grunt.loadNpmTasks( 'grunt-babel');
+	grunt.loadNpmTasks( 'grunt-string-replace' );
 
 	// Default task
 	grunt.registerTask( 'default', [ 'css', 'js' ] );
@@ -189,6 +215,7 @@ module.exports = function(grunt) {
 	grunt.registerTask( 'test', [ 'jshint', 'qunit' ] );
 
 	// Babel ES6 transpiling
-	grunt.registerTask("transpile", ["babel"]);
+	// Also creates an index-dist.html version of the page
+	grunt.registerTask("transpile", ["babel", "string-replace:indexDistHtml"]);
 
 };
