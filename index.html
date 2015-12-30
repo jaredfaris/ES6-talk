@@ -295,6 +295,10 @@
                             <li>Function</li>
                             <li><i>What's missing here?</i></li>
                         </ul>
+
+                        <aside class="notes">
+                            Block/operational scope is a pretty standard language feature in other languages.
+                        </aside>
                     </section>
                     <section>
                         <h2>Function Scope Demo</h2>
@@ -325,13 +329,13 @@
                     <section>
                         <h2>Let Demo</h2>
                         <script src="samples/let-scoping-1.js"></script>
-                        <script src="samples/let-scoping-1.js" type="application/javascript;version=1.7"></script>
+                        <!--<script src="samples/let-scoping-1.js" type="application/javascript;version=1.7"></script>-->
                         <button id="letScopeDemo1button" onclick="letScopingDemo1()">Go!</button>
                     </section>
                     <section>
                         <h2>Let <strike>Hoisting</strike></h2>
                         <script src="samples/let-hoisting-1.js"></script>
-                        <script src="samples/let-hoisting-1.js" type="application/javascript;version=1.7"></script>
+                        <!--<script src="samples/let-hoisting-1.js" type="application/javascript;version=1.7"></script>-->
                         <button id="letHoistingDemo1button" onclick="letHoistingDemo1()">Go!</button>
 
                         <p>This is known as the "Temporal Dead Zone"</p>
@@ -339,10 +343,8 @@
                     <section>
                         <h2>Limitations</h2>
                         <ul>
-                            <li class="fragment">Switch statements are a single block.</li>
-                            <li class="fragment">Chrome currently requires strict mode.</li>
-                            <li class="fragment">Firefox requires a special script tag `type="application/javascript;version=1.7"`</li>
-                            <li class="fragment">The special tag isn't compatible with Chrome...</li>
+                            <li class="fragment">Switch statements are a single block</li>
+                            <li class="fragment">Supported in Chrome, Edge and Firefox. Requires strict mode.</li>
                         </ul>
                     </section>
                 </section>
@@ -370,26 +372,13 @@
                         <script src="samples/constant-mutability-1.js"></script>
                         <button id="constantMutabilityDemo1button" onclick="constantMutabilityDemo1()">Go!</button>
                     </section>
-                    <section>
-                        <h2>"Use Strict" Behavior</h2>
-                        <script src="samples/constant-scope-2.js"></script>
-                        <button id="constantScopeDemo2button" onclick="constantScopeDemo2()">Go!</button>
-                    </section>
-                    <section>
-                        <h2>Without "Use Strict" Scope</h2>
-                        <p>The block scope part of the constant doesn't get enforced.</p>
 
-                        <script src="samples/constant-scope-1.js"></script>
-                        <button id="constantScopeDemo1button" onclick="constantScopeDemo1()">Go!</button>
-
-                    </section>
                     <section>
                         <h2>Limitations</h2>
                         <ul>
-                            <li class="fragment">Re-assigning a value fails silently in Chrome and Firefox.</li>
-                            <li class="fragment">It doesn't fail in Safari...</li>
-                            <li class="fragment">Different browser errors if used before declaration.</li>
-                            <li class="fragment">Different errors with "use strict".</li>
+                            <li class="fragment">If you aren't in strict mode, block scope won't exist. Constants will be in function or global scope</li>
+                            <li class="fragment">Browsers aren't consistent on their error messaging</li>
+                            <li class="fragment">Errors aren't consistent between strict and normal modes</li>
                         </ul>
                     </section>
 
@@ -503,14 +492,15 @@
                         <h2>Other Oddities</h2>
                         <ul>
                             <li class="fragment">Class declarations/expressions are internally "strict mode"</li>
-                            <li class="fragment">Semicolons are allowed between methods and not required.</li>
+                            <li class="fragment">Semicolons are allowed between methods and not required</li>
                         </ul>
                     </section>
 
                     <section>
                         <h2>Limitations</h2>
                         <ul>
-                            <li class="fragment">Only supported by Chrome and Edge 13 as of 10/6/2015 and requires strict mode</li>
+                            <li class="fragment">Supported in Chrome, Edge and Safari as of 12/30/2015 and requires strict mode</li>
+                            <li class="fragment">Firefox support is set to ship in 3/2016 with Firefox 45</li>
                         </ul>
                     </section>
                 </section>
@@ -615,8 +605,8 @@
                     <section>
                         <h2>When To Use?</h2>
                         <ul>
-                            <li class="fragment">When creating methods (reusable function objects), use functions.</li>
-                            <li class="fragment">When creating subroutins/callbacks, use arrows.</li>
+                            <li class="fragment">When creating methods (reusable function objects), use functions</li>
+                            <li class="fragment">When creating subroutins/callbacks, use arrows</li>
                             <li class="fragment">Really good when chaining functional methods</li>
                         </ul>
                     </section>
