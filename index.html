@@ -186,13 +186,48 @@
                     </section>
                 </section>
 
-                <section data-background="#004676">
-                    <h1>JavaScript is weird</h1>
-                    <p class="fragment">ES6 adds useful features onto this weirdness</p>
+                <section>
+                    <section>
+                        <h2>One more...</h2>
+                    </section>
+                    <section>
+                        <h2>What does this do?</h2>
+                        <img src="images/variable-scoping/hoisted1.jpg">
+                    </section>
+
+                    <section>
+                        <h2>Hoisting Example</h2>
+                        <script src="samples/variable-scoping-1.js"></script>
+                        <button id="variableScopringDemo1button" onclick="variableScopingDemo1()">Go!</button>
+
+                        <aside class="notes">
+                            Hoisting happens because JS does two passes during interpretation.
+                            One processes variables and functions.
+                            The second actually executes the code.
+                            The first step organizes the code to make the second faster, and hoisting is part of this.
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h2>Variable Hoisting</h2>
+                        <p>Variables can be used before they are declared because of how JS is parsed.</p>
+                    </section>
+
+                    <section>
+                        <h2>Where Variables Get Hoisted</h2>
+                        <img src="images/variable-scoping/hoisted1.jpg">
+                        &nbsp;
+                        <img src="images/variable-scoping/hoisted2.jpg">
+                    </section>
                 </section>
 
                 <section data-background="#004676">
-                    <h1>Support & Transpiling</h1>
+                    <h1>JavaScript is weird</h1>
+                    <p class="fragment">ES2015 doesn't fix this. It just adds useful features onto the weird.</p>
+                </section>
+
+                <section data-background="#004676">
+                    <h1>Can I Use This ES2015 Stuff?</h1>
                 </section>
 
                 <section>
@@ -223,7 +258,7 @@
                     </section>
 
                     <section>
-                        <h2>ES6 vs ES5 examples</h2>
+                        <h2>ES6/2015 vs ES5 examples</h2>
                         <a href="https://github.com/addyosmani/es6-equivalents-in-es5#modules">https://github.com/addyosmani/es6-equivalents-in-es5#modules</a>
                     </section>
                 </section>
@@ -242,7 +277,7 @@
                         <h2>It probably doesn't matter</h2>
 
                         <aside class="notes">
-                            Rarely is your JS logic the reason your site is 
+                            Rarely is your JS logic the reason your site is
                         </aside>
                     </section>
                 </section>
@@ -251,31 +286,6 @@
 				<section data-background="#004676">
 					<h1>Variable Scoping</h1>
 				</section>
-
-                <section>
-                    <section>
-                        <h2>Variable Hoisting</h2>
-                        <p>Variables can be used before they are declared because of how JS is parsed.</p>
-                    </section>
-                    <section>
-                        <h2>Hoisting Example</h2>
-                        <script src="samples/variable-scoping-1.js"></script>
-                        <button id="variableScopringDemo1button" onclick="variableScopingDemo1()">Go!</button>
-
-                        <aside class="notes">
-                            Hoisting happens because JS does two passes during interpretation.
-                            One processes variables and functions.
-                            The second actually executes the code.
-                            The first step organizes the code to make the second faster, and hoisting is part of this.
-                        </aside>
-                    </section>
-                    <section>
-                        <h2>Where Variables Get Hoisted</h2>
-                        <img src="images/variable-scoping/hoisted1.jpg">
-                        &nbsp;
-                        <img src="images/variable-scoping/hoisted2.jpg">
-                    </section>
-                </section>
 
                 <section>
                     <section>
