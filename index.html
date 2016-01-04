@@ -101,6 +101,10 @@
                             <div id="ecmascriptTimelineLast" class="prevNextButton">&gt;&gt;</div>
                         </div>
                     </section>
+                    <section>
+                        <h2>A bit of clarification</h2>
+                        <p>ES6 or ES2015?</p>
+                    </section>
 				</section>
 
                 <section>
@@ -231,6 +235,9 @@
                 </section>
 
                 <section>
+                    <section>
+                        <h2>No. Yes. Sort of!</h2>
+                    </section>
                     <section>
                         <h2>Support</h2>
                         <img src="images/browser-support/chart.PNG">
@@ -749,16 +756,40 @@
                 </section>
 
                 <section data-background="#004676">
-                    <h1>Generator Methods</h1>
+                    <h1>Generator Methods & Iteration</h1>
                 </section>
 
                 <section>
+                    <section>
+                        <h2>Iterable Objects</h2>
+                        <ul>
+                            <li class="fragment">ES6 adds new protocols for iterating over objects</li>
+                            <li class="fragment">Allows a "for x of y" syntax</li>
+                            <li class="fragment">Built into many types (string, array, etc)</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>For ... Of</h2>
+                        <pre><code>
+    for (user of allUsers) {
+        // do stuff
+    }
+                        </code></pre>
+                        <p>instead of</p>
+                        <pre><code>
+    for (index in allUsers) {
+        let user = allUsers[index];
+        // do stuff
+    }
+                        </code></pre>
+                    </section>
                     <section>
                         <h2>Generator Idea</h2>
                         <ul>
                             <li class="fragment">Can pause their own execution with the 'yield' keyword</li>
                             <li class="fragment">Can be resumed with 'next'</li>
                             <li class="fragment">Allows repetitive or asynchronous code to be more clear</li>
+                            <li class="fragment">Lets you easily make iteraotrs</li>
                         </ul>
                     </section>
                     <section>
@@ -767,7 +798,12 @@
                         <button id="generator1Button" onclick="generators1Demo()">Go!</button>
                     </section>
                     <section>
-                        <h2>?</h2>
+                        <h2>Where are these useful</h2>
+                        <ul>
+                            <li class="fragment">When you want to write code that says "for ... of"</li>
+                            <li class="fragment">When you want to build a complex object to parse things that gets called in chunks</li>
+                            <li class="fragment">Anytime you wish you could pause a function</li>
+                        </ul>
                     </section>
                 </section>
 
