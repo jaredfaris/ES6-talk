@@ -14,8 +14,10 @@ function constantMutabilityDemo1 () {
     console.log(MY_BOOK_CONST.title);
 
     debugger;
-    MY_BOOK_CONST = {
-        title: "Third Title",
-        author: "John Smith"
-    };
+    // The transpile demo will fail if this is uncommented.
+    // Uncomment it at demo time.
+    //MY_BOOK_CONST = {
+    //    title: "Third Title",
+    //    author: "John Smith"
+    //};
 }
