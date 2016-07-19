@@ -48,47 +48,47 @@ var timelineData = [
     },
     {
         name: "Renamed to LiveScript and then JavaScript",
-        pos: "-200px"
+        pos: "-400px"
     },
     {
         name: "Netscape gave JS to Ecma International",
-        pos: "-430px"
+        pos: "-860px"
     },
     {
         name: "ECMAScript 1 Published",
-        pos: "-650px"
-    },
-    {
-        name: "ECMAScript 2 Published",
-        pos: "-900px"
-    },
-    {
-        name: "ECMAScript 3 Published",
         pos: "-1300px"
     },
     {
+        name: "ECMAScript 2 Published",
+        pos: "-1800px"
+    },
+    {
+        name: "ECMAScript 3 Published",
+        pos: "-2600px"
+    },
+    {
         name: "Firefox Released",
-        pos: "-1700px"
+        pos: "-3400px"
     },
     {
         name: "Chrome Released",
-        pos: "-3370px"
+        pos: "-6740px"
     },
     {
         name: "ECMAScript 5 Published",
-        pos: "-4000px"
+        pos: "-8000px"
     },
     {
         name: "ECMAScript 5.1 Published",
-        pos: "-4400px"
+        pos: "-8800px"
     },
     {
         name: "ECMAScript 6 Published",
-        pos: "-5460px"
+        pos: "-10920px"
     },
     {
         name: "The Future",
-        pos: "-5600px"
+        pos: "-11200px"
     }
 ];
 
